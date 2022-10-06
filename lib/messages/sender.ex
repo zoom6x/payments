@@ -10,12 +10,12 @@ defmodule Messages.Sender do
 
   # end
 
-  def publish_message(message) do
-  {:ok, connection} = AMQP.Connection.open
-  {:ok, channel} = AMQP.Channel.open(connection)
-    AMQP.Basic.publish(channel, "", "hello", message)
-    IO.puts " Payments Module Sent #{message}"
-    AMQP.Connection.close(connection)
-  end
+  # def publish_message(message) do
+  # {:ok, connection} = AMQP.Connection.open
+  # {:ok, channel} = AMQP.Channel.open(connection)
+  #   AMQP.Basic.publish(channel, "", "hello", message)
+  #   IO.puts " Payments Module Sent #{message}"
+  #   AMQP.Connection.close(connection)
+  # end
 
 end
